@@ -7,9 +7,9 @@ public class typing {
         Scanner myScanner = new Scanner(System.in);
         int min = 1;
         int max = 22;
-        int times = 10;
+        //int times = 10;
         int score = 0;
-        while (times >= 0) {
+        while (score < 5) {
             int number = (int) (Math.random() * (max - min + 1)) + min;
             System.out.println(number);
 
@@ -46,9 +46,10 @@ public class typing {
                 score++;
                 System.out.println("Great job!  Score: " + score);
             } else {
+                score--;
                 System.out.println("WRONGGG  Score: " + score);
             }
-            times--;
+            //times--;
         }
     }
 }
