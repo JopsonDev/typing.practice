@@ -6,24 +6,36 @@ public class typing {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         int min = 1;
-        int max = 10;
+        int max = 22;
         int times = 10;
         while (times >= 0) {
             int number = (int) (Math.random() * (max - min + 1)) + min;
             System.out.println(number);
 
-            String x = "";
+            String x;
             switch (number) {
                 case 1 -> x = "sout";
                 case 2 -> x = "Scanner myScanner = new Scanner(System.in);";
                 case 3 -> x = "switch(){";
-                case 4 -> x = "String();";
+                case 4 -> x = "String";
                 case 5 -> x = "if (x==y) {";
                 case 6 -> x = "souf";
                 case 7 -> x = "Math.random();";
                 case 8 -> x = "Math.sqrt();";
                 case 9 -> x = "Math.max();";
                 case 10 -> x = "Math.min();";
+                case 11 -> x = "double";
+                case 12 -> x = "int";
+                case 13 -> x = "float";
+                case 14 -> x = "char";
+                case 15 -> x = "boolean";
+                case 16 -> x = "&& = and";
+                case 17 -> x = "|| = or";
+                case 18 -> x = "! = not";
+                case 19 -> x = "!= = not equal";
+                case 20 -> x = "== means equal";
+                case 21 -> x = ".equals();";
+                case 22 -> x = "equalsIgnoreCase();";
                 default -> x = "Fail;";
 
             }
