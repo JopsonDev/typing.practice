@@ -8,6 +8,7 @@ public class typing {
         int min = 1;
         int max = 22;
         int times = 10;
+        int score = 0;
         while (times >= 0) {
             int number = (int) (Math.random() * (max - min + 1)) + min;
             System.out.println(number);
@@ -43,9 +44,10 @@ public class typing {
             System.out.print("Answer: ");
             String answer = myScanner.nextLine();
             if (x.equals(answer)) {
-                System.out.println("Great job!");
+                score++;
+                System.out.println("Great job!  Score: " + score);
             } else {
-                System.out.println("WRONGGG");
+                System.out.println("WRONGGG  Score: " + score);
             }
             times--;
         }
