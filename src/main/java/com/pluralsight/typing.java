@@ -15,12 +15,12 @@ public class typing {
 
             String x;
             switch (number) {
-                case 1 -> x = "sout";
+                case 1 -> x = "\"hello\".sout";
                 case 2 -> x = "Scanner myScanner = new Scanner(System.in);";
                 case 3 -> x = "switch(){";
                 case 4 -> x = "String";
                 case 5 -> x = "if (x==y) {";
-                case 6 -> x = "souf";
+                case 6 -> x = "\"hello\".souf";
                 case 7 -> x = "Math.random();";
                 case 8 -> x = "Math.sqrt();";
                 case 9 -> x = "Math.max();";
@@ -38,7 +38,6 @@ public class typing {
                 case 21 -> x = ".equals();";
                 case 22 -> x = "equalsIgnoreCase();";
                 default -> x = "Fail;";
-
             }
             System.out.println(x);
             System.out.print("Answer: ");
