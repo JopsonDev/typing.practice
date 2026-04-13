@@ -6,12 +6,12 @@ public class typing {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         int min = 1;
-        int max = 22;
+        int max = 27;
         //int times = 10;
         int score = 0;
         while (score < 5) {
             int number = (int) (Math.random() * (max - min + 1)) + min;
-            System.out.println(number);
+            System.out.println(number); //for me delete when finished
 
             String x;
             switch (number) {
@@ -36,10 +36,21 @@ public class typing {
                 case 19 -> x = "!= = not equal";
                 case 20 -> x = "== means equal";
                 case 21 -> x = ".equals();";
-                case 22 -> x = "equalsIgnoreCase();";
+                case 22 -> x = ".equalsIgnoreCase();";
+                case 23 -> x = ".length();";
+                case 24 -> x = ".trim";
+                case 25 -> x = ".toUpperCase();";
+                case 26 -> x = ".toLowerCase();";
+                case 27 -> x = ".startsWith();";
+                case 28 -> x = ".endsWith();";
+                case 29 -> x = ".charAt();";
+                case 30 -> x = ".indexOf();";
+                case 31 -> x = ".lastIndexOf();";
+                case 32 -> x = ".substring(x, y);";
                 default -> x = "Fail;";
             }
-            System.out.println(x);
+            score(x, myScanner, score);
+/*            System.out.println(x);
             System.out.print("Answer: ");
             String answer = myScanner.nextLine();
             if (x.equals(answer)) {
@@ -49,7 +60,24 @@ public class typing {
                 score--;
                 System.out.println("WRONGGG  Score: " + score);
             }
+            return score;*/
             //times--;
         }
+    }
+    public static int score(String x, Scanner answerScanner, int score) {
+        score = 0;
+        System.out.println(x);
+        System.out.print("Answer: ");
+        String answer = answerScanner.nextLine();
+        if (x.equals(answer)) {
+            score++;
+            System.out.println("Great job!  Score: " + score);
+            return score;
+        } else {
+            score--;
+            System.out.println("WRONGGG  Score: " + score);
+            return score;
+        }
+
     }
 }
