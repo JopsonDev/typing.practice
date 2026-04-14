@@ -6,8 +6,7 @@ public class typing {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         int min = 1;
-        int max = 27;
-        //int times = 10;
+        int max = 34;
         int score = 0;
         while (score < 5) {
             int number = (int) (Math.random() * (max - min + 1)) + min;
@@ -47,37 +46,24 @@ public class typing {
                 case 30 -> x = ".indexOf();";
                 case 31 -> x = ".lastIndexOf();";
                 case 32 -> x = ".substring(x, y);";
+                case 33 -> x = "DateTimeFormatter.ofPattern";
+                case 34 -> x = "Integer.parseInt();";
                 default -> x = "Fail;";
             }
-            score(x, myScanner, score);
-/*            System.out.println(x);
+            System.out.println(x);
             System.out.print("Answer: ");
             String answer = myScanner.nextLine();
             if (x.equals(answer)) {
                 score++;
                 System.out.println("Great job!  Score: " + score);
             } else {
-                score--;
+                if(score > 0) {
+                    score--;
+                }
                 System.out.println("WRONGGG  Score: " + score);
             }
-            return score;*/
-            //times--;
         }
     }
-    public static int score(String x, Scanner answerScanner, int score) {
-        score = 0;
-        System.out.println(x);
-        System.out.print("Answer: ");
-        String answer = answerScanner.nextLine();
-        if (x.equals(answer)) {
-            score++;
-            System.out.println("Great job!  Score: " + score);
-            return score;
-        } else {
-            score--;
-            System.out.println("WRONGGG  Score: " + score);
-            return score;
-        }
 
-    }
 }
+
